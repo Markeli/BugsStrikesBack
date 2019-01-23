@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DeathStar.UnitTestsWithFakes
 {
     /// <summary>
-    /// Пример создания подделки для статического класса
+    /// Пример создания fake для статического класса
     /// </summary>
     [TestClass]
     public class ShimFromFakesExample
