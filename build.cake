@@ -12,23 +12,13 @@ var configuration = Argument<string>("configuration", "Release");
 // запуск тестов
 #Tool "xunit.runner.console"
 
-var testResultsDir = artifactsDir + Directory("test-results");
 var solutionPath = "./UnitTests.BugsStrikesBack.sln";
 var framework = "netstandard2.0";
 
 Task("Clean")
     .Does(() => 
     {            
-        DotNetCoreClean(solutionPath);        
-        DirectoryPath[] cleanDirectories = new DirectoryPath[] {
-            binsDir,
-            testResultsDir,
-        };
-    
-        CleanDirectories(cleanDirectories);
-    
-        foreach(var path in cleanDirectories) { EnsureDirectoryExists(path); }
-    
+        DotNetCoreClean(solutionPath);            
     });
 
 Task("Build")

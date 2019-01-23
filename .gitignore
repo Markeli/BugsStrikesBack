@@ -242,3 +242,11 @@ ModelManifest.xml
 .fake/
 
 \.idea/\.idea\.UnitTestBugsStrikesBack/\.idea/
+
+tools/Cake\.CoreCLR\.0\.30\.0/cake\.coreclr/0\.30\.0/
+
+tools/xunit\.runner\.console\.2\.4\.1/tools/net452/
+
+tools/xunit\.runner\.console\.2\.4\.1/
+
+tools/
