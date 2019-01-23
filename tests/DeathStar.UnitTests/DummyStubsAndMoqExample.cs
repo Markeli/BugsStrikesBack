@@ -5,7 +5,7 @@ using Xunit;
 namespace DeathStart.UnitTests
 {
     /// <summary>
-    /// Пример создания ручного создания заглушки
+    /// Пример ручного создания заглушки
     /// </summary>
     public class DummyStubsAndMoqExample
     {

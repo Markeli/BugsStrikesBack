@@ -4,7 +4,7 @@ using Xunit;
 
 namespace DeathStart.UnitTests
 {
-    public class MsTestAttributesExample
+    public class XUnitAttributesExample
     {
       //  [TestCategory("react")]
         [Fact]

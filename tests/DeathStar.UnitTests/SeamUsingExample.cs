@@ -3,7 +3,7 @@
 namespace DeathStart.UnitTests
 {
     /// <summary>
-    /// Пример разрыва зависимостей через зазоры (seam)
+    /// Пример разрыва зависимостей через швы (seam)
     /// </summary>
     public class SeamUsingExample
     {
@@ -11,7 +11,7 @@ namespace DeathStart.UnitTests
         private class ProtectiveFieldGeneratorStub : ProtectiveFieldGenerator
         {
             /// <summary>
-            /// Разрыв чере конструктор
+            /// Разрыв через конструктор
             /// </summary>
             /// <param name="reactor"></param>
             public ProtectiveFieldGeneratorStub(IReactor reactor) : base(reactor)
