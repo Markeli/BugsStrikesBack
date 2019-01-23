@@ -8,7 +8,7 @@
 
 ## Архитектура Звезды Смерти
 
-[![ClassDiagram](./artifacts/classDiagramm.png))]([classDiagramm](./artifacts/classDiagramm.png))
+[![ClassDiagram](./docs/classDiagramm.png)]([classDiagramm](./docs/classDiagramm.png))
 
 Она крайне проста, состоит из реактора, генератора защитного поля и луча Смерти:
 
@@ -20,8 +20,7 @@
 
 ## Структура репозитория
 
-- `artifacts`: содержит диаграмму классов `DeathStart`
-- `docs`: презентация с митапа
+- `docs`: презентация с митапа, диаграмму классов `DeathStar`
 - `src`: основной код Звезды Смерти
 - `tests`: все тесты и демо с митапа
   - `DeathStar.DummyTest`: примитивный тест с использованием консоли
