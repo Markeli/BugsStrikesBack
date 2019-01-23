@@ -5,14 +5,14 @@ using Xunit;
 namespace DeathStart.UnitTests
 {
     /// <summary>
-    /// Пример ручного создания заглушки
+    /// Пример ручного создания подделки
     /// </summary>
     public class DummyStubsAndMoqExample
     {
         [Fact]
         public async Task StubTestAsync()
         {
-            var stub = new ReactorStub1();
+            var stub = new ReactorFake();
             var shield = new ProtectiveFieldGenerator(stub);
 
             await shield.ActivateAsync();
@@ -21,10 +21,15 @@ namespace DeathStart.UnitTests
 
         }
 
-        private class ReactorStub1 : IReactor
+        /// <summary>
+        /// Фейковый реактор с настраиваемым нами поведением
+        /// </summary>
+        private class ReactorFake : IReactor
         {
+            /// <inheritdoc />
             public short HealthLevel { get; }
 
+            /// <inheritdoc />
             public bool IsActive { get; private set; }
 
             public void GetDamage(Damage damage)
@@ -32,17 +37,20 @@ namespace DeathStart.UnitTests
                 throw new System.NotImplementedException();
             }
 
+            /// <inheritdoc />
             public Task ActivateAsync()
             {
                 IsActive = true;
                 return Task.CompletedTask;
             }
 
+            /// <inheritdoc />
             public Task DeactivateAsync()
             {
                 throw new System.NotImplementedException();
             }
 
+            /// <inheritdoc />
             public Energy GetEnergy(double level)
             {
                 IsActive = true;

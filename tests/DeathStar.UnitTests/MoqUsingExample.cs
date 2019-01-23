@@ -23,14 +23,15 @@ namespace DeathStart.UnitTests
         {
             // создаем подделку нужного интерфейса
             var mock = new Mock<IReactor>();
-            // настраиваем, а именно говорим, что при вызове метода GetEnergy для любого аргумента должен возвращаться объект Energy с задданым уровнем из аргумента
-            mock.Setup(x => x.GetEnergy(It.IsAny<double>())).Returns<double>(s => new Energy(s));
+            // настраиваем, а именно говорим, что при вызове метода GetEnergy
+            // для любого аргумента должен возвращаться объект Energy с задданым уровнем из аргумента
+            mock
+                .Setup(x =>x.GetEnergy(It.IsAny<double>()))
+                .Returns<double>(s => new Energy(s));
             // создаем объект, который будет использовать нашу подделку
             var  shield = new ProtectiveFieldGenerator(mock.Object);
 
             await shield.ActivateAsync();
-            // гонка потока, подождем
-            await Task.Delay(TimeSpan.FromSeconds(1));
 
             Assert.True(shield.IsActive, "Shield not activated");
             Assert.Equal(shield.MaxShieldLevel, shield.ShieldLevel);

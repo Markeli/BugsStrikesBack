@@ -62,18 +62,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ShimFromFakesExample.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Fakes Include="Fakes\DeathStar.fakes" />
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
+    <Fakes Include="Fakes\DeathStar.fakes" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\DeathStar\DeathStar.csproj">
-      <Project>{b27f3b0c-3320-4e2b-823c-fb77f117465b}</Project>
+      <Project>{34894d51-ec98-4e11-a9f6-a98b35827d74}</Project>
       <Name>DeathStar</Name>
     </ProjectReference>
   </ItemGroup>

@@ -14,11 +14,14 @@ namespace DeathStar.DummyTest
 
         private static async Task TestReactorAsync()
         {
+            // подготовка (arrange)
             var reactor = new Reactor(100);
             await reactor.ActivateAsync();
 
+            // действие (act)
             var energy = reactor.GetEnergy(100);
 
+            // утверждение (assert)
             Console.WriteLine(energy != null);
             Console.WriteLine(energy.Level == 100);
         }
