@@ -79,7 +79,7 @@ namespace DeathStar
 
         public short ShieldLevel { get; private set; }
 
-        protected ProtectiveFieldGenerator()
+        public ProtectiveFieldGenerator()
         {
             ShieldLevel = MaxShieldLevel;
             HealthLevel = MaxHealthLevel;
@@ -95,23 +95,14 @@ namespace DeathStar
             HealthLevel = MaxHealthLevel;
             Reactor = reactor ?? throw new ArgumentNullException(nameof(reactor));
         }
-
-        /// <summary>
-        /// Метод для установки реактора для разрыва зависимости
-        /// </summary>
-        /// <param name="reactor"></param>
-        public void SetReactor(IReactor reactor)
-        {
-            Reactor = reactor;
-        }
-
+        
         /// <summary>
         /// Фабричный метод для разрыва зависимости
         /// </summary>
         /// <returns></returns>
         public virtual IReactor GetReactor()
         {
-            return new Reactor(100);
+            return Reactor;
         }
 
 
@@ -120,19 +111,20 @@ namespace DeathStar
             const double level = 10;
             do
             {
-                // реактор сломан
+                // генератор сломан
                 if (HealthLevel <= 0) break;
                 
                 try
                 {
-                    if (Reactor == null) throw new InvalidOperationException("Не установлен реактор");
+                    var reactor = GetReactor();
+                    if (reactor == null) throw new InvalidOperationException("Не установлен реактор");
 
-                    var energy = Reactor.GetEnergy(level);
+                    var energy = reactor.GetEnergy(level);
                     var isEnergyEnough = energy != null
                                && Math.Abs(energy.Level - level) < Tolerance;
                     if (isEnergyEnough)
                     {
-                        ShieldLevel = (short)Math.Max(
+                        ShieldLevel = (short)Math.Min(
                             MaxShieldLevel, 
                             ShieldLevel + ShieldRegenerationLevel);
                     }

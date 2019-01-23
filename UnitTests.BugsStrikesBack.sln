@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeathStar", "src\DeathStar\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathStar.DummyTest", "tests\DeathStart.DummyTest\DeathStar.DummyTest.csproj", "{29F479F2-DA6C-4E32-81B3-7108FC752589}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathStart.UnitTests", "tests\DeathStart.UnitTests\DeathStart.UnitTests.csproj", "{077B34AF-104D-4DF4-B76B-EE998BE0647A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{29F479F2-DA6C-4E32-81B3-7108FC752589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F479F2-DA6C-4E32-81B3-7108FC752589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F479F2-DA6C-4E32-81B3-7108FC752589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077B34AF-104D-4DF4-B76B-EE998BE0647A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077B34AF-104D-4DF4-B76B-EE998BE0647A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077B34AF-104D-4DF4-B76B-EE998BE0647A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077B34AF-104D-4DF4-B76B-EE998BE0647A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B} = {53D5BE27-A678-4B2C-842F-90A8984B4702}
 		{29F479F2-DA6C-4E32-81B3-7108FC752589} = {5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}
+		{077B34AF-104D-4DF4-B76B-EE998BE0647A} = {5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DC9A045-E789-44DF-9EB9-6CA0309F2CEE}
