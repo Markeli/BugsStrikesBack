@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeathStart.UnitTests", "tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeathStar.DummyTest", "tests\DeathStar.DummyTest\DeathStar.DummyTest.csproj", "{15557859-C572-422D-8D41-B84176FD61A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathStar.UnitTestsWithFakes", "tests\DeathStar.UnitTestsWithFakes\DeathStar.UnitTestsWithFakes.csproj", "{701CB0AD-4081-4B27-9733-CCC2C357A1AC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathStar", "src\DeathStar\DeathStar.csproj", "{34894D51-EC98-4E11-A9F6-A98B35827D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeathStar", "src\DeathStar\DeathStar.csproj", "{34894D51-EC98-4E11-A9F6-A98B35827D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{15557859-C572-422D-8D41-B84176FD61A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15557859-C572-422D-8D41-B84176FD61A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15557859-C572-422D-8D41-B84176FD61A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{701CB0AD-4081-4B27-9733-CCC2C357A1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{701CB0AD-4081-4B27-9733-CCC2C357A1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{701CB0AD-4081-4B27-9733-CCC2C357A1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{701CB0AD-4081-4B27-9733-CCC2C357A1AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34894D51-EC98-4E11-A9F6-A98B35827D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34894D51-EC98-4E11-A9F6-A98B35827D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34894D51-EC98-4E11-A9F6-A98B35827D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,7 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9FB9D872-E991-48D1-B069-4F45506C3789} = {5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}
 		{15557859-C572-422D-8D41-B84176FD61A2} = {5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}
-		{701CB0AD-4081-4B27-9733-CCC2C357A1AC} = {5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}
 		{34894D51-EC98-4E11-A9F6-A98B35827D74} = {53D5BE27-A678-4B2C-842F-90A8984B4702}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
