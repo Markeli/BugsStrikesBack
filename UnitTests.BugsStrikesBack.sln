@@ -3,9 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{56D02A80-1BD2-45B0-A984-2691E3483BCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{53D5BE27-A678-4B2C-842F-90A8984B4702}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E0618C4-FC5D-4AFD-A298-16EDE3164C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathStar", "src\DeathStar\DeathStar.csproj", "{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1B6EB08-63E7-4FF8-9A36-9BC5A37BA01B} = {53D5BE27-A678-4B2C-842F-90A8984B4702}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DC9A045-E789-44DF-9EB9-6CA0309F2CEE}
