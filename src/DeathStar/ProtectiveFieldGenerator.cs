@@ -23,22 +23,22 @@ namespace DeathStar
         /// <summary>
         /// Уровень поглощения защитным полем урона от механического повреждения
         /// </summary>
-        private const double MechanicDamageReduceFactor = 0.74;
+        internal readonly  double MechanicDamageReduceFactor = 0.74;
 
         /// <summary>
         /// Уровень поглощения защитным полем урона от лазерного оружия
         /// </summary>
-        private const double LaserDamageReduceFactor = 1.0;
+        internal readonly  double LaserDamageReduceFactor = 0.9;
 
         /// <summary>
         /// Уровень поглощения защитным полем урона от ионного оружия
         /// </summary>
-        private const double IonDamageReduceFactor = 0.2;
+        internal readonly double IonDamageReduceFactor = 0.2;
 
         /// <summary>
         /// Уровень поглощения защитным полем урона от протонного оружия
         /// </summary>
-        private const double ProtonDamageReduceFactor = 0.1;
+        internal readonly  double ProtonDamageReduceFactor = 0.1;
 
         /// <summary>
         /// Точность измерений
@@ -134,7 +134,7 @@ namespace DeathStar
                 {
                     // все нормально, щит отключили
                 }
-            } while (cancellationToken.IsCancellationRequested);
+            } while (!cancellationToken.IsCancellationRequested);
         }
 
         public void GetDamage([NotNull] Damage damage)
@@ -203,13 +203,13 @@ namespace DeathStar
                     throw new ArgumentOutOfRangeException();
             }
 
-            var damageAfterReduce = Convert.ToInt16(Math.Round(damageReduceFactor * damage.Level));
+            var damageAfterReduce = damage.Level - Convert.ToInt16(Math.Round(damageReduceFactor * damage.Level));
             if (damageAfterReduce <= 0) return null;
 
             var shieldDecreaseLevel = (short)(damageAfterReduce / 2);
             ShieldLevel = (short)Math.Max(0, ShieldLevel - shieldDecreaseLevel);
 
-            return new Damage(damageAfterReduce, damage.Type);
+            return new Damage((short)damageAfterReduce, damage.Type);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace DeathStart.UnitTests
     /// <summary>
     /// Пример ручного создания подделки
     /// </summary>
-    public class DummyStubsAndMoqExample
+    public class DummyFakeExample
     {
         [Fact]
         public async Task StubTestAsync()
